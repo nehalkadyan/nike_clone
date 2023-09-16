@@ -1,0 +1,19 @@
+.video__section{
+    width: 100%;
+    padding-top: 4rem;
+}
+
+.heading{
+    padding: 0rem 0rem 1rem 3rem;
+}
+
+.video__container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.video__container video{
+    width: 95%;
+}

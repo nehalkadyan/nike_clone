@@ -1,0 +1,177 @@
+.header{
+    display: flex;
+    align-items: center;
+    width: 100%; 
+    justify-content: space-between;
+    position: relative;
+}
+
+.header__img{
+    width: 80px;
+    height: 50px;
+    padding-left: 2.5rem;
+}
+
+.header__img img{
+    width: 100%;
+    transition: -1s ease-in-out;
+}
+
+.header__img img:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.header__items{
+    display: flex;
+    list-style: none;
+    position: relative;
+    gap: 2rem;
+}
+
+
+
+.sub__menu{
+   position: absolute; 
+   z-index: 500;
+   box-shadow: -2px 1px 50px -27px ;
+   background-color: white;
+   width: 1530px;
+   left: 50%;
+   display: flex;
+   justify-content: center;
+   gap: 5rem;
+   transform: translateX(-49%);
+   height: 500px;
+   
+   padding: 3rem 0rem;
+   z-index: 555;
+   visibility: hidden;
+   transition: all 0.5 s ease-in-out;
+
+}
+
+
+
+.flex__direction{
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.flex__direction>li{
+  color: grey;
+  transition: all 0.1s ease-in-out;
+}
+
+.flex__direction>li:hover{
+    color: black;
+}
+
+.sub__menu_heading>ul>li{
+    margin: -1.5rem 0rem;
+    margin-left: -2rem;
+}
+
+.sub__menu_heading>ul{
+    margin-top: 2rem;
+}
+
+
+
+
+.header__items .first__item:hover .sub__menu{
+    visibility: visible;
+    margin-top: 20px;
+}
+
+.sub__menu>ul>li:hover{
+    padding: 1rem 0rem;
+    border-bottom: 2px solid black;
+}
+
+
+
+
+
+
+
+.sub__menu ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 4rem;
+}
+
+
+
+.header__items li{
+    cursor: pointer;
+}
+
+.header__items>li:hover{
+    border-bottom: 2px solid black;
+}
+
+
+
+.header__right{
+    padding-right: 2rem;
+    display: flex;
+    align-items: center;
+}
+.header__search{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search__icon {
+    background-color: rgb(245, 245, 245);
+    width: 30px;
+    padding: 0.6rem ;
+    position: relative;
+    left: -13rem;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    color: black;
+   
+
+}
+
+.search__icon:hover{
+    background-color: rgb(236, 236, 236);
+    cursor: pointer;
+}
+
+
+
+
+.header__search>input{
+   
+    right: 3rem;
+    width: 150px;
+    padding: 0.7rem;
+    position: absolute;
+    font-size: 16px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    background-color: rgb(245, 245, 245);
+    color: silver;
+}
+
+.header__search>input:hover{
+    background-color: rgb(236, 236, 236);
+    color: rgb(85, 85, 85);
+}
+
+.header__icons{
+    display: flex;
+    gap: 1.5rem;
+    cursor: pointer;
+}
+
+.icon{
+    font-size: 23px;
+}

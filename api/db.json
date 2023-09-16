@@ -1,0 +1,17 @@
+{
+    "users" :[
+       {
+        "id": 1,
+        "name": "John"
+       },
+       {
+        "id": 2,
+        "age": 18
+       },
+       {
+        "id": 3,
+        "city": "New York"
+       }
+    ]
+ }
+    

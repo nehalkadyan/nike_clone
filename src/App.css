@@ -1,0 +1,15 @@
+.App {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.trending__section{
+  display: flex;
+  justify-content: center;
+}
+
+.homepage{
+  width: 100%;
+}
+

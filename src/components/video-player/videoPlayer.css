@@ -1,0 +1,28 @@
+.video_player_section{
+    width: 100%;
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.video_container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.video_container video{
+    width: 95%;
+}
+
+.video_player_btn{
+  border: none;
+  font-size: 40px;
+  border-radius: 100px;
+  position: relative;
+  z-index: 999;
+  bottom: -50rem;
+  left: 6rem;
+  cursor: pointer;
+  color: #fff;
+  
+}

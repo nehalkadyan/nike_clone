@@ -1,0 +1,52 @@
+.footer{
+    display: flex;
+    background-color: black;
+    height: 400px;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 1rem;
+}
+
+.footer__left{
+    display: flex;
+    padding-left: 3rem;
+    gap: 4rem;
+}
+
+.footer__left_first ul li{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    margin-bottom: 0.9rem;
+    cursor: pointer;
+}
+
+.footer__left_second ul li, .footer__left_third ul li{
+    font-size: 14px;
+    color: rgb(155, 155, 155);
+    margin-bottom: 1.2rem;
+
+}
+
+.footer__left_second ul li:hover, .footer__left_third ul li:hover{
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer ul{
+    list-style: none;
+    color: #fff;
+}
+
+.footer__right ul{
+    display: flex;
+    gap: 0.7rem;
+    font-size: 25px;
+    padding-right: 3rem;
+    color: silver;
+}
+
+.footer__right ul li:hover{
+    color: #fff;
+    cursor: pointer;
+}
+

@@ -1,0 +1,41 @@
+.topbar{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(236, 236, 236);
+    justify-content: space-between;
+    height: 60px;
+
+
+}
+
+.topbar__img{
+    padding: 0rem 0rem 0rem 3rem;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.topbar__img img{
+    height: 100%;
+}
+
+.topbar__img img:hover{
+    opacity: 0.5;
+}
+
+.topbar__items__list{
+    padding: 0rem 3rem 0rem 0rem;
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.topbar__items__list li{
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.topbar__items__list li:hover{
+    opacity: 0.6;
+}
