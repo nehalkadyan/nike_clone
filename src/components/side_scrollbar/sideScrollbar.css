@@ -1,0 +1,39 @@
+ul{
+  list-style: none;
+}
+
+.side_scrollbar{
+    width: 100%;
+}
+
+
+.color_section>li>div{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    border: .1px solid rgb(227, 227, 227);
+}
+
+.color_section{
+    width: 191px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+
+}
+
+.gender_checkbox{
+    width: 160px;
+}
+
+.gender_checkbox_heading{
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow_btn{
+    font-size: 2cap;
+}
