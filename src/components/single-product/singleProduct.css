@@ -1,0 +1,13 @@
+.single_product{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-around;
+    margin-top: 4rem;
+}
+
+
+
+.single_product_img>img{
+    width: 100%;
+}

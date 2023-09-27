@@ -1,0 +1,47 @@
+.products_section{
+    text-align: center;
+    height: 110vh;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.product_card_section{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.product_card{
+    width: 350px;
+    cursor: pointer;
+    
+}
+.product_card>img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.products_section::-webkit-scrollbar{
+    display: none;
+}
+
+.product_body{
+    line-height: 24px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 1.2rem;
+}
+
+@media screen and (max-width: 800px){
+    .product_card{
+        width: 90%;
+        
+    }
+
+    
+}
+
+

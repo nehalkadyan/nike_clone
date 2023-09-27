@@ -1,0 +1,45 @@
+.quantity{
+   margin: 2rem 0rem;
+}
+
+.quantity_buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+ 
+}
+
+
+.quantity_buttons>button{
+    border: none;
+    background-color: #fff;
+    font-size: 24px;
+}
+
+.active_button{
+    background-color: black;
+    color: #fff;
+}
+
+@media screen and (max-width: 1000px) {
+    .quantity{
+        margin: 1rem 0rem;
+     }
+
+     .quantity>h3{
+        font-size: 15px;
+     }
+
+     .quantity_buttons{
+        gap: 0.8rem;
+    }
+
+    .quantity_buttons>button{
+      
+        font-size: 17px;
+    }
+}
+
+
+

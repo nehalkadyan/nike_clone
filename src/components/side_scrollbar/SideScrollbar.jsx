@@ -1,24 +1,60 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import "./sideScrollbar.css";
-import Multiselect from "multiselect-react-dropdown";
-import { BsArrowDownShort } from "react-icons/bs";
+import { useFilterContext } from "../../context/filterContext";
 
 const SideScrollbar = () => {
-  const [gender, setGender] = useState(["Male", "Female", "Unisex"]);
+  // const [gender, setGender] = useState(["Male", "Female", "Unisex"]);
+
+  const {filters:{ price, maxPrice, minPrice}, clearFilters, all_products, updateFilterValue} = useFilterContext();
+
+
+
+const getUniqueData = (data, property) => {
+  let newVal = data.map((item) => { 
+      return item[property];
+  }
+  );
+  // if(property === "colors"){
+  //   newVal = newVal.flat();
+  //   console.log(newVal)
+  // }
+  
+   
+  return (newVal = ["all", ...new Set(newVal)]);
+}
+
+// WE NEED UNIQUE DATA  
+const categoryOnlyData = getUniqueData(all_products, "category");
+const genderData = getUniqueData(all_products, "gender" );
+const kidsData = getUniqueData(all_products, "kids");
+const sportsData = getUniqueData(all_products, "sports");
+// const colorsData = getUniqueData(all_products, "colors");
+
+
+ 
+
 
   return (
     <div className="side_scrollbar">
-      <ul className="side_scrollbar_categories">
-        <li>Shoes</li>
-        <li>Tops and T-Shirts</li>
-        <li>Hoodies and Sweatshirts</li>
-        <li>Jackets</li>
-        <li>Shorts</li>
-        <li>Accessories</li>
-        <li>Socks</li>
+      <span>Categories</span>
+      <ul className="side_scrollbar_categories" >
+        {
+          categoryOnlyData.map((item, index) => {
+            return ( 
+            <button  key = {index} 
+            type="button"
+            name="category"
+            value={item}
+            onClick={updateFilterValue}
+            >
+              {item}
+            </button>
+            )
+          })
+        }
       </ul>
 
-      <hr />
+      
 
       {/* <Multiselect
         closeOnSelect
@@ -34,73 +70,92 @@ const SideScrollbar = () => {
         options={gender}
       /> */}
 
-      <div className="gender_checkbox">
-        <div className="gender_checkbox_heading">
+      {/* <div className="gender_checkbox"> */}
+        {/* <div className="gender_checkbox_heading">
           <span>Gender</span>
-          <div className="arrow_btn">
+          <div className={showDropdown ? "arrow_btn_open" : "arrow_btn"} onClick={() => setShowDropdown(!showDropdown) }>
             <BsArrowDownShort />
           </div>
+        </div> */}
+
+        
+
+        <div className="gender_section">
+        <span>Gender</span>
+
+          <form action="#" className="gender_form">
+          <select className="select_box" name="gender" id ="gender" onClick={updateFilterValue}>
+              {
+                genderData.map((item, index) => {
+                    return (
+                      <option  key={index} value={item} name="gender">
+                        {item}
+                        </option>
+                    )
+                })
+              }
+          </select>
+          </form>
         </div>
-      </div>
+      {/* </div> */}
 
       <hr />
-      <ul>
-        <h3>Kids</h3>
-        <li>
-          <input type="checkbox" /> <span>Boys</span>
-        </li>
-        <li>
-          <input type="checkbox" /> <span>Girls</span>
-        </li>
-      </ul>
+      
+       <div className="kids_section">
+       <span>Kids</span>
 
-      <ul>
-        <h3>Shop By Price</h3>
-        <li>
-          <input type="checkbox" /> <span>Under RS. 2500.00</span>
-        </li>
-        <li>
-          <input type="checkbox" /> <span>Under RS. 2501.00 - 7500.00</span>
-        </li>
-        <li>
-          <input type="checkbox" /> <span>Under RS. 7501.00 - 12999.00</span>
-        </li>
-        <li>
-          <input type="checkbox" /> <span>Under Rs. 13000.00</span>
-        </li>
-      </ul>
+          <form action="#" >
+          <select className="select_box" name="kids" id ="kids" onClick={updateFilterValue}>
+            
+              {
+                kidsData.map((item, index) => {
+                    return (
+                      <option  key={index} value={item} name="kids">
+                        {item}
+                        </option>
+                    )
+                })
+              }
+          </select>
+      </form>
+      </div>
+      
+      <div className="price_section">
+          <span>Shop By Price</span>
+         
+           <h6>{price}</h6>
+           <input name="price"  type="range" min={minPrice} max={maxPrice} value={price} onChange={updateFilterValue}/>
+      
+      </div>
 
-      <h3 style={{ marginLeft: "2.5rem" }}>Colour</h3>
-      <ul className="color_section">
-        <li>
-          <div style={{ backgroundColor: "purple" }} className="purple"></div>
-        </li>
-        <li>
-          <div style={{ backgroundColor: "black" }} className="black"></div>
-        </li>
-        <li>
-          <div style={{ backgroundColor: "red" }} className="red"></div>
-        </li>
-        <li>
-          <div style={{ backgroundColor: "orange" }} className="orange"></div>
-        </li>
-        <li>
-          <div style={{ backgroundColor: "blue" }} className="blue"></div>
-        </li>
-        <li>
-          <div style={{ backgroundColor: "white" }} className="white"></div>
-        </li>
-        <li>
-          <div style={{ backgroundColor: "brown" }} className="brown"></div>
-        </li>
-        <li>
-          <div style={{ backgroundColor: "green" }} className="green"></div>
-        </li>
-        <li>
-          <div style={{ backgroundColor: "yellow" }} className="yellow"></div>
-        </li>
-      </ul>
-    </div>
+      
+      
+
+     
+      
+        <div className="sports_form">
+          <span>Sports</span>
+      <form action="#">
+
+          <select className="select_box" name="sports" id ="sports" onClick={updateFilterValue}>
+              {
+               sportsData.map((item, index) => {
+                    return (
+                      <option  key={index} value={item} name="sports">
+                        {item}
+                        </option>
+                    )
+                })
+              }
+          </select>
+          </form>
+          </div>
+
+          <div className="side_scrollbar_clear_filter">
+            <button onClick={clearFilters}>Clear Filters</button>
+          </div>
+      </div>
+    
   );
 };
 

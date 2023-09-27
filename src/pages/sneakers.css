@@ -1,0 +1,74 @@
+.sneakers_page{
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.sneakers_page_heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+   
+}
+
+.sneakers_page_logo{
+    margin-left: 2rem;
+}
+
+.sneakers_page_items{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.sneakers_page_items>li{
+    cursor: pointer;
+}
+
+.view_options_icons{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+.sneaker_card_section{
+    margin: auto;
+    width: 95%;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr ;
+   gap: 1;
+ 
+}
+
+.sneaker_card_multi_view{
+    margin: auto;
+    width: 95%;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+   gap: 1rem;
+   
+
+}
+
+@media screen and (max-width: 650px){
+
+    .sneakers_page_items{
+       margin-right: 2rem;
+    }
+
+    .sneaker_card_section{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+
+    .sneaker_card_multi_view{
+        display: none;
+    }
+
+    .view_options_icons{
+        display: none;
+       
+    }
+}

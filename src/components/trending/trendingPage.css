@@ -15,7 +15,8 @@
 .large__card_body{
     position: relative;
     top: -11rem;
-    left: 2.5rem;
+    width: 90%;
+    margin-left: 3rem;
 }
 
 .large__card_body button {
@@ -27,8 +28,44 @@
     border: none;
     cursor: pointer;
     margin-top: 1rem;
+
   }
   
   .large__card_body button:hover {
     opacity: 0.7;
   }
+
+@media screen and (max-width: 900px){
+    .large__card_body>h2{
+        font-size: 20px;
+    }
+
+    .large__card_body button {
+        padding: 0.4rem 1rem; 
+        font-size: 15px;
+      }
+
+      .large__card_body>span{
+        font-size: 15px;
+      }
+
+      .large__card_body{
+     
+        top: -8rem;
+       
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .trending__section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    
+}
+

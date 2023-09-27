@@ -1,16 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./header.css";
 import nikeLogo from "../../assets/images/nike-logo.jpg";
 import {BsSearch} from "react-icons/bs";
 import {AiOutlineHeart} from "react-icons/ai"
 import {PiSuitcaseSimpleThin} from "react-icons/pi"
+import { useFilterContext } from '../../context/filterContext';
+import { NavLink } from 'react-router-dom';
+import { useCartContext } from '../../context/cartContext';
+import {GiHamburgerMenu} from "react-icons/gi"
 
 const Header = () => {
+    const [showMenu, setShowMenu] = useState(false)
+    const {total_item} = useCartContext()
+
+    const {filters:{text}, all_products, updateFilterValue} = useFilterContext()
+
+
+    // TO GET UNIQUE DATA OF EACH FIELD
+    
+
+
   return (
     <div className='header'>
         <div className='header__img'>
-            <img src={nikeLogo} alt="header-img"/>
-            </div>
+       
+            <NavLink to="/"><img src={nikeLogo} alt="header-img"/></NavLink>
+            </div> 
 
             <ul className='header__items'>
               <li className='first__item'>News & Featured
@@ -412,7 +427,7 @@ const Header = () => {
                   
               </div>
               </li>
-              <li className='first__item'>Sale
+              <li className='first__item'><NavLink className="navlink" to="/sale">Sale</NavLink>
               <div className='sub__menu'>
                 <ul>
                    <div className='sub__menu_heading'><h3>Featured</h3>
@@ -484,7 +499,7 @@ const Header = () => {
                   
               </div>
               </li>
-              <li>SNKRS</li>
+              <NavLink className="navlink" to="/snkr"><li>SNKRS</li></NavLink>
 
             </ul>
 
@@ -492,16 +507,50 @@ const Header = () => {
                 <div className='header__search'>
                     <div className='search__icon'><BsSearch /></div>
                     
-                <input placeholder='Search'/>
+                <input type="text" name="text" value={text} onChange={updateFilterValue} placeholder='Search'/>
                 </div>
                 
                 <div className='header__icons'> 
+                
+                <div>
                 <AiOutlineHeart className='icon' />
-                <PiSuitcaseSimpleThin className='icon' />
                 </div>
+                
+                <div>
+                <NavLink className="navlink" to="/cart"><PiSuitcaseSimpleThin className='cart_icon' /></NavLink>
+                <div className='total_item_icon'>
+                {total_item}
+                </div>
+                </div>
+                
+                <GiHamburgerMenu className='menu_icon' onClick={() => setShowMenu(!showMenu)}/> 
+
+                <div className={showMenu ? "slide-out-menu" : "slide-out-hide"}>
+                   {
+                    showMenu ? <ul className='slide-out-list'>
+                    <li onClick={() => setShowMenu(!showMenu)}>New & Featured</li>
+                    <li onClick={() => setShowMenu(!showMenu)}>Men</li>
+                    <li onClick={() => setShowMenu(!showMenu)}>Women</li>
+                    <li onClick={() => setShowMenu(!showMenu)}>Kids</li>
+                    <NavLink className="navlink" to="/sale"><li onClick={() => setShowMenu(!showMenu)}>Sale</li></NavLink>
+                    <NavLink className="navlink" to="/snkr"> <li onClick={() => setShowMenu(!showMenu)}>SNKRS</li></NavLink>
+                   </ul> : ""
+                   }
+                   
+                    
+               
+                </div>
+                </div>
+
+               
+
+                
+                
+                
                 
 
             </div>
+           
        
     </div>
   )

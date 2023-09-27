@@ -39,3 +39,21 @@
 .topbar__items__list li:hover{
     opacity: 0.6;
 }
+
+@media screen and (max-width: 500px){
+
+    .topbar__img{
+        padding: 0rem 0rem 0rem 1rem;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+    
+
+    .topbar__items__list{
+        padding: 0rem 1rem 0rem 0rem;
+        display: flex;
+        list-style: none;
+        gap: 1rem;
+    }
+}

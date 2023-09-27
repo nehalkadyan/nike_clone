@@ -16,7 +16,8 @@
 .essential__card_btn{
     position: relative;
     top: -6rem;
-    left: 3rem;
+    width: 70%;
+    margin-left: 2.5rem;
 }
 
 .essential__card_btn button {
@@ -32,4 +33,11 @@
   
   .essential__card_btn button:hover {
     opacity: 0.7;
+  }
+
+  @media screen and (max-width:600px) {
+    .essential__card{
+        width: 90%;
+           
+    }
   }

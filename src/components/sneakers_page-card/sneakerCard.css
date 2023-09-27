@@ -1,0 +1,32 @@
+.sneaker_card{
+    margin-bottom: 2rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
+}
+
+.sneaker_card_img{
+    width: 100%;
+    height: 60%;
+}
+
+.sneaker_card_img>img{
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+
+}
+
+.sneaker_card_body{
+    text-align: center;
+    cursor: pointer;
+    height: 100%;
+   
+
+    
+    
+}
+
+
+
+
+

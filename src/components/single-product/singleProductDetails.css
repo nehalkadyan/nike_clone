@@ -1,0 +1,142 @@
+.single_product_details{
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    margin-bottom: 8rem;
+}
+
+
+
+
+.single_product_image{
+    width: 60%;
+
+}
+
+.single_product_image>img{
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.single_product_img_container{
+    margin: 2rem 0rem;
+}
+
+.single_product_img_container>img{
+ width: 100px;
+ height: 100px;
+ object-fit: contain;
+
+ margin: 0.1rem;
+}
+
+.size_button{
+    padding: 1rem 2rem;
+    background-color: rgb(250, 247, 247);
+    border: 0.3px solid silver;
+    border-radius: 10px;
+}
+
+.single_product_details_body{
+    overflow-y: scroll;
+    width: 40%;
+    height: 80vh;
+    gap: 2rem;
+
+}
+
+.single_product_details_body::-webkit-scrollbar{
+    display: none;
+}
+
+.single_product_details_body{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.size_card{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.add_to_cart{
+    width: 100%;
+    margin: 1.5rem 0rem;
+}
+
+.add_to_cart>button{
+    padding: 1rem ;
+    width: 100%;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+
+}
+
+.navlink{
+    text-decoration: none;
+    color: black;
+}
+
+.add_to_cart{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+.add_to_cart button{
+   padding: 1rem 5rem;
+   border: none;
+   background-color: black;
+   color: #fff;
+   border-radius: 10px;
+}
+
+.accordion{
+    margin: 2rem;
+}
+
+@media screen and (max-width: 1000px){
+    .single_product_details{
+        height: 100%;
+        justify-content: start;
+        flex-direction: column;
+        
+        
+    }
+
+    .single_product_image{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 3rem;
+        
+    
+    }
+    
+    .single_product_image>img{
+        width: 95%;
+        height: 40vh;
+        object-fit: contain;
+    }
+
+    .single_product_details_body{
+
+       
+        width: 100%;
+        height: 100%;
+        gap: 2rem;
+    
+    }
+    .accordion{
+        margin: 2rem 0rem;
+    }
+    
+}
