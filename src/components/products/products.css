@@ -38,6 +38,7 @@
 @media screen and (max-width: 800px){
     .product_card{
         width: 90%;
+        margin: auto;
         
     }
 
