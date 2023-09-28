@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {BsFillGridFill} from "react-icons/bs";
-import {BiGrid, BiSolidGrid} from "react-icons/bi";
+import { BiSolidGrid} from "react-icons/bi";
 import "./sneakers.css"
 import SneakerCard from '../components/sneakers_page-card/SneakerCard';
 
@@ -155,9 +155,6 @@ const stockedData = sneakerCardData.filter((item) => {
     return item.stock === true;
 })
 
-const upcomingData = sneakerCardData.filter((item) => {
-    return item.upcoming === true;
-})
 
 
 

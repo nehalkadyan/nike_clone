@@ -13,7 +13,7 @@ const Header = () => {
     const [showMenu, setShowMenu] = useState(false)
     const {total_item} = useCartContext()
 
-    const {filters:{text}, all_products, updateFilterValue} = useFilterContext()
+    const {filters:{text},  updateFilterValue} = useFilterContext()
 
 
     // TO GET UNIQUE DATA OF EACH FIELD

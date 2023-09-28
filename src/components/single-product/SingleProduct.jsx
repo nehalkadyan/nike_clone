@@ -21,7 +21,7 @@ const SingleProduct = () => {
     
     useEffect(() => {
         getSingleProduct(`${API}?id=${id}`);
-    }, []);
+    } );
 
 
   return (

@@ -1,6 +1,5 @@
 import React from "react";
 import HeroSection from "../components/hero-section/HeroSection";
-import TopBar from "../components/top-bar/TopBar";
 import homeHeroPoster from "../assets/images/heroPoster.jpg";
 import VideoSection from "../components/video-section/VideoSection"
 import nikeVideo from "../assets/videos/Nike_Ad.mp4";

@@ -1,12 +1,10 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import "./products.css";
 import { useFilterContext } from '../../context/filterContext';
-import { useProductContext } from '../../context/productContext';
 import {NavLink} from "react-router-dom";
 
 const Products = () => {
     const {filter_products} = useFilterContext()
-    const {total_products} = useProductContext()
    
 
 

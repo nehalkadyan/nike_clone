@@ -20,7 +20,7 @@ const HeroSection = ({
       
 
       <div className="hero__Poster">
-        <img src={heroPoster} alt="background-image" />
+        <img src={heroPoster} alt="background" />
       </div>
 
       <div className="hero__Card">

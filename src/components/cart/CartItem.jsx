@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "./cart.css";
 import { MdDeleteOutline } from "react-icons/md";
-import SubTotal from "./subTotal";
 import { useCartContext } from "../../context/cartContext";
 import Quantity from "../quantity/Quantity";
 
-const CartItem = ({ id, name, img, price, amount, subtitle }) => {
+const CartItem = ({ id, name, img, price, amount }) => {
   const { removeItem, setIncrease, setDecrease } = useCartContext();
   
   // const [value, setValue] = useState(quantity)

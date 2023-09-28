@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import "./sideScrollbar.css";
 import { useFilterContext } from "../../context/filterContext";
 

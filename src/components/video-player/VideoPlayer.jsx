@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react'
+import React, {useRef} from 'react'
 import nikeVideo from "../../assets/videos/Nike_Find.mp4"
 import "./videoPlayer.css"
 import {AiFillPlayCircle,AiFillPauseCircle} from "react-icons/ai";

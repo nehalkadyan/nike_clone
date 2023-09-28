@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import "./sneakerCard.css";
 
 const SneakerCard = ({name, model, cardImage}) => {
